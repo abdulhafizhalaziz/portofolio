@@ -45,6 +45,13 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+html,
+body {
+  overflow-x: clip; /* cegah halaman bisa digeser ke samping di HP */
+}
+body.menu-open {
+  overflow: hidden;
+}
 img {
   max-width: 100%;
   display: block;
@@ -189,11 +196,25 @@ section {
     padding 0.3s,
     border-color 0.3s;
   border-bottom: 1px solid transparent;
+  isolation: isolate;
 }
-.hdr.is-scrolled {
+/* Latar buram dipasang di lapisan terpisah (::before), bukan di header,
+   supaya menu layar penuh di HP tidak ikut terkurung di dalam header. */
+.hdr::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
   background: rgba(11, 11, 13, 0.78);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.hdr.is-scrolled::before {
+  opacity: 1;
+}
+.hdr.is-scrolled {
   padding-block: 12px;
   border-color: var(--line-dark);
 }
@@ -1390,17 +1411,25 @@ section {
     justify-content: center;
     align-items: center;
     gap: 26px;
-    background: rgba(11, 11, 13, 0.97);
+    height: 100vh;
+    height: 100dvh;
+    background: var(--dark);
     opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
+    visibility: hidden;
+    transition:
+      opacity 0.3s,
+      visibility 0.3s;
   }
   .nav a {
     font-size: 1rem;
+    padding: 6px 12px;
   }
   .hdr.is-open .nav {
     opacity: 1;
-    pointer-events: auto;
+    visibility: visible;
+  }
+  .hdr.is-open {
+    border-color: transparent;
   }
   .burger {
     display: grid;

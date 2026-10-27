@@ -18,6 +18,20 @@ export default function Header({ active }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // Saat menu HP terbuka: kunci gulir halaman dan tutup dengan tombol Esc
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', open);
+    if (!open) return undefined;
+    const onKey = (e) => e.key === 'Escape' && setOpen(false);
+    const onResize = () => window.innerWidth > 980 && setOpen(false);
+    document.addEventListener('keydown', onKey);
+    window.addEventListener('resize', onResize);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', onResize);
+    };
+  }, [open]);
+
   const go = (id) => (e) => {
     e.preventDefault();
     setOpen(false);
