@@ -117,7 +117,6 @@ export const projects = [
         'Menyusun 34 halaman panduan berdasarkan petunjuk teknis resmi.',
         'Membangun pencarian, filter koperasi/dinas, dan halaman persyaratan dokumen.',
         'Menyusun struktur PHP yang rapi dengan template dan data terpusat.',
-        'Men-deploy ke Vercel melalui GitHub.',
       ],
       en: [
         'Wrote 34 guide pages based on the official technical manual.',

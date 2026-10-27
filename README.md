@@ -3,6 +3,8 @@
 Situs portofolio pribadi dengan React + Vite. Dua bahasa (Indonesia/English), animasi saat digulir,
 karusel sertifikat 3D, dan pop-up detail proyek.
 
+> Panduan lengkap merawat dan memperbarui situs: lihat **PEDOMAN-MAINTENANCE.md**.
+
 ## Menjalankan di komputer
 
 1. Pasang **Node.js versi 20 atau lebih baru** dari https://nodejs.org (pilih versi LTS).
