@@ -122,7 +122,6 @@ export const projects = [
         'Wrote 34 guide pages based on the official technical manual.',
         'Built search, cooperative/agency filters, and a document requirements page.',
         'Organised the PHP code with shared templates and centralised data.',
-        'Deployed to Vercel through GitHub.',
       ],
     },
     tags: ['PHP', 'JavaScript', 'CSS', 'Vercel'],
