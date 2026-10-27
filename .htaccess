@@ -1,0 +1,4 @@
+# Khusus XAMPP: membuka localhost/portfolio-hafizh/ langsung ke hasil build (folder dist).
+# Jalankan "npm run build" setiap kali selesai mengubah isi agar dist ikut diperbarui.
+RewriteEngine On
+RewriteRule ^$ %{REQUEST_URI}dist/ [R=302,L]
