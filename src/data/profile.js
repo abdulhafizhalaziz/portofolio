@@ -270,7 +270,7 @@ export const certificates = [
     number: '14467397',
     issued: { id: 'September 2025', en: 'September 2025' },
     valid: { id: 'Berlaku hingga September 2028', en: 'Expires on September 2028' },
-    link: 'https://drive.google.com/drive/folders/1oqJsvUqgulvWlcdYUzRzSaNb0TjARuyF?usp=drive_link',
+    link: 'https://drive.google.com/file/d/1mudlzVLv4PbnA2PSu50hD0oxFFt9OhH0/view?usp=sharing',
     featured: true,
   },
   {
@@ -311,7 +311,7 @@ export const certificates = [
     number: 'C. Tel. 371/PD520/WSB/2019',
     issued: { id: 'Magang Okt – Des 2019', en: 'Internship Oct – Dec 2019' },
     valid: null,
-    link: 'https://drive.google.com/drive/folders/1oqJsvUqgulvWlcdYUzRzSaNb0TjARuyF?hl=ID',
+    link: 'https://drive.google.com/file/d/1VIlU-7phTXPdtSL34RerrRezw79OKKMX/view?usp=sharing',
   },
 ];
 
